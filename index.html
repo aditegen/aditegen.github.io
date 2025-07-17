@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aditegen 学术服务</title>
+    <title>Aditegen Academic Services</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -23,6 +23,7 @@
             color: white;
             padding: 20px 0;
             text-align: center;
+            position: relative;
         }
         h1 {
             margin: 0;
@@ -86,25 +87,51 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             margin-bottom: 30px;
         }
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .language-btn {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .language-btn:hover {
+            background-color: #e9ecef;
+        }
+        .language-btn.active {
+            background-color: #2c3e50;
+            color: white;
+            border-color: #2c3e50;
+        }
     </style>
 </head>
 <body>
     <header>
+        <div class="language-switcher">
+            <button class="language-btn active" id="zh-btn">中文</button>
+            <button class="language-btn" id="en-btn">English</button>
+        </div>
         <div class="container">
             <div class="logo">ADITEGEN</div>
-            <h1>专业学术服务</h1>
-            <p>助力您的学术成功</p>
+            <h1 class="i18n" data-i18n="title">专业学术服务</h1>
+            <p class="i18n" data-i18n="subtitle">助力您的学术成功</p>
         </div>
     </header>
 
     <nav>
         <div class="container">
             <ul>
-                <li><a href="#home">首页</a></li>
-                <li><a href="#sci">SCI发表</a></li>
-                <li><a href="#academic-training">学术培训</a></li>
-                <li><a href="#math-tutoring">数学辅导</a></li>
-                <li><a href="#contact">联系我们</a></li>
+                <li><a href="#home" class="i18n" data-i18n="nav.home">首页</a></li>
+                <li><a href="#sci" class="i18n" data-i18n="nav.sci">SCI发表</a></li>
+                <li><a href="#academic-training" class="i18n" data-i18n="nav.training">学术培训</a></li>
+                <li><a href="#math-tutoring" class="i18n" data-i18n="nav.math">数学辅导</a></li>
+                <li><a href="#contact" class="i18n" data-i18n="nav.contact">联系我们</a></li>
             </ul>
         </div>
     </nav>
@@ -112,114 +139,277 @@
     <div class="container">
         <section id="home">
             <div class="home-intro">
-                <h2>欢迎来到 Aditegen 学术服务</h2>
-                <p>Aditegen 是一家专注于高端学术服务的专业机构，我们的团队由来自世界顶尖大学的博士和教授组成，致力于为学生和研究人员提供最专业的学术支持。</p>
-                <p>无论您是需要SCI论文发表指导，还是寻求学术培训或数学辅导，我们的专家团队都能为您提供个性化的解决方案。</p>
+                <h2 class="i18n" data-i18n="home.title">欢迎来到 Aditegen 学术服务</h2>
+                <p class="i18n" data-i18n="home.p1">Aditegen 是一家专注于高端学术服务的专业机构，我们的团队由来自世界顶尖大学的博士和教授组成，致力于为学生和研究人员提供最专业的学术支持。</p>
+                <p class="i18n" data-i18n="home.p2">无论您是需要SCI论文发表指导，还是寻求学术培训或数学辅导，我们的专家团队都能为您提供个性化的解决方案。</p>
             </div>
         </section>
 
         <section id="sci">
-            <h2>SCI发表服务</h2>
+            <h2 class="i18n" data-i18n="sci.title">SCI发表服务</h2>
             
             <div class="service">
-                <h3>SCI论文全程辅导</h3>
-                <p>我们的SCI论文辅导服务由经验丰富的学术专家提供，涵盖从选题、实验设计到论文撰写、修改和投稿的全过程。我们专注于帮助研究人员在高影响力期刊上发表论文。</p>
+                <h3 class="i18n" data-i18n="sci.service1.title">SCI论文全程辅导</h3>
+                <p class="i18n" data-i18n="sci.service1.desc">我们的SCI论文辅导服务由经验丰富的学术专家提供，涵盖从选题、实验设计到论文撰写、修改和投稿的全过程。我们专注于帮助研究人员在高影响力期刊上发表论文。</p>
                 <ul>
-                    <li>研究课题设计与优化</li>
-                    <li>论文结构与写作指导</li>
-                    <li>数据分析和结果呈现</li>
-                    <li>期刊选择与投稿策略</li>
-                    <li>审稿意见回复指导</li>
+                    <li class="i18n" data-i18n="sci.service1.item1">研究课题设计与优化</li>
+                    <li class="i18n" data-i18n="sci.service1.item2">论文结构与写作指导</li>
+                    <li class="i18n" data-i18n="sci.service1.item3">数据分析和结果呈现</li>
+                    <li class="i18n" data-i18n="sci.service1.item4">期刊选择与投稿策略</li>
+                    <li class="i18n" data-i18n="sci.service1.item5">审稿意见回复指导</li>
                 </ul>
             </div>
             
             <div class="service">
-                <h3>硕博毕业论文辅导</h3>
-                <p>为硕士和博士研究生提供全方位的毕业论文指导服务，从开题报告到最终答辩准备，我们的专家团队将全程陪伴您的学术旅程。</p>
+                <h3 class="i18n" data-i18n="sci.service2.title">硕博毕业论文辅导</h3>
+                <p class="i18n" data-i18n="sci.service2.desc">为硕士和博士研究生提供全方位的毕业论文指导服务，从开题报告到最终答辩准备，我们的专家团队将全程陪伴您的学术旅程。</p>
                 <ul>
-                    <li>研究方案设计与优化</li>
-                    <li>文献综述指导</li>
-                    <li>研究方法咨询</li>
-                    <li>论文结构与写作指导</li>
-                    <li>答辩准备与模拟</li>
+                    <li class="i18n" data-i18n="sci.service2.item1">研究方案设计与优化</li>
+                    <li class="i18n" data-i18n="sci.service2.item2">文献综述指导</li>
+                    <li class="i18n" data-i18n="sci.service2.item3">研究方法咨询</li>
+                    <li class="i18n" data-i18n="sci.service2.item4">论文结构与写作指导</li>
+                    <li class="i18n" data-i18n="sci.service2.item5">答辩准备与模拟</li>
                 </ul>
             </div>
         </section>
 
         <section id="academic-training">
-            <h2>学术培训服务</h2>
+            <h2 class="i18n" data-i18n="training.title">学术培训服务</h2>
             
             <div class="service">
-                <h3>学术写作培训</h3>
-                <p>针对学术论文写作的系统培训课程，帮助研究人员掌握国际学术写作规范。</p>
+                <h3 class="i18n" data-i18n="training.service1.title">学术写作培训</h3>
+                <p class="i18n" data-i18n="training.service1.desc">针对学术论文写作的系统培训课程，帮助研究人员掌握国际学术写作规范。</p>
                 <ul>
-                    <li>学术英语写作技巧</li>
-                    <li>文献综述写作方法</li>
-                    <li>研究论文各部分写作规范</li>
-                    <li>学术表达与论证技巧</li>
+                    <li class="i18n" data-i18n="training.service1.item1">学术英语写作技巧</li>
+                    <li class="i18n" data-i18n="training.service1.item2">文献综述写作方法</li>
+                    <li class="i18n" data-i18n="training.service1.item3">研究论文各部分写作规范</li>
+                    <li class="i18n" data-i18n="training.service1.item4">学术表达与论证技巧</li>
                 </ul>
             </div>
             
             <div class="service">
-                <h3>研究方法培训</h3>
-                <p>系统讲解各类研究方法，提升研究设计能力。</p>
+                <h3 class="i18n" data-i18n="training.service2.title">研究方法培训</h3>
+                <p class="i18n" data-i18n="training.service2.desc">系统讲解各类研究方法，提升研究设计能力。</p>
                 <ul>
-                    <li>定量研究方法</li>
-                    <li>定性研究方法</li>
-                    <li>混合研究方法</li>
-                    <li>数据分析方法</li>
+                    <li class="i18n" data-i18n="training.service2.item1">定量研究方法</li>
+                    <li class="i18n" data-i18n="training.service2.item2">定性研究方法</li>
+                    <li class="i18n" data-i18n="training.service2.item3">混合研究方法</li>
+                    <li class="i18n" data-i18n="training.service2.item4">数据分析方法</li>
                 </ul>
             </div>
         </section>
 
         <section id="math-tutoring">
-            <h2>数学辅导服务</h2>
+            <h2 class="i18n" data-i18n="math.title">数学辅导服务</h2>
             
             <div class="service">
-                <h3>SAT数学培训</h3>
-                <p>我们的SAT数学培训课程针对中国学生特点设计，帮助学生快速掌握考试技巧，提高数学成绩。课程内容包括所有SAT数学考点和解题策略。</p>
+                <h3 class="i18n" data-i18n="math.service1.title">SAT数学培训</h3>
+                <p class="i18n" data-i18n="math.service1.desc">我们的SAT数学培训课程针对中国学生特点设计，帮助学生快速掌握考试技巧，提高数学成绩。课程内容包括所有SAT数学考点和解题策略。</p>
                 <ul>
-                    <li>全面覆盖SAT数学考试内容</li>
-                    <li>个性化学习计划</li>
-                    <li>真题模拟与解析</li>
-                    <li>考试技巧与时间管理</li>
-                    <li>定期进度评估</li>
+                    <li class="i18n" data-i18n="math.service1.item1">全面覆盖SAT数学考试内容</li>
+                    <li class="i18n" data-i18n="math.service1.item2">个性化学习计划</li>
+                    <li class="i18n" data-i18n="math.service1.item3">真题模拟与解析</li>
+                    <li class="i18n" data-i18n="math.service1.item4">考试技巧与时间管理</li>
+                    <li class="i18n" data-i18n="math.service1.item5">定期进度评估</li>
                 </ul>
             </div>
             
             <div class="service">
-                <h3>北美本科数学培训</h3>
-                <p>为在北美就读本科的学生提供专业数学课程辅导，包括微积分、线性代数、概率统计等核心课程。我们的导师均来自北美顶尖大学，熟悉北美教学体系。</p>
+                <h3 class="i18n" data-i18n="math.service2.title">北美本科数学培训</h3>
+                <p class="i18n" data-i18n="math.service2.desc">为在北美就读本科的学生提供专业数学课程辅导，包括微积分、线性代数、概率统计等核心课程。我们的导师均来自北美顶尖大学，熟悉北美教学体系。</p>
                 <ul>
-                    <li>一对一课程辅导</li>
-                    <li>作业与考试准备</li>
-                    <li>概念理解与问题解决能力培养</li>
-                    <li>与教授沟通技巧指导</li>
-                    <li>学术写作辅导</li>
+                    <li class="i18n" data-i18n="math.service2.item1">一对一课程辅导</li>
+                    <li class="i18n" data-i18n="math.service2.item2">作业与考试准备</li>
+                    <li class="i18n" data-i18n="math.service2.item3">概念理解与问题解决能力培养</li>
+                    <li class="i18n" data-i18n="math.service2.item4">与教授沟通技巧指导</li>
+                    <li class="i18n" data-i18n="math.service2.item5">学术写作辅导</li>
                 </ul>
             </div>
         </section>
 
         <section id="about">
-            <h2>关于 Aditegen</h2>
-            <p>Aditegen 是一家专注于学术服务的专业机构，我们的团队由来自世界顶尖大学的博士和教授组成，拥有丰富的教学和研究经验。我们致力于为学生和研究人员提供高质量的学术支持服务，帮助他们在学术道路上取得成功。</p>
-            <p>我们的使命是通过专业的指导和个性化的服务，提升客户的学术能力和研究水平，助力他们在竞争激烈的学术环境中脱颖而出。</p>
+            <h2 class="i18n" data-i18n="about.title">关于 Aditegen</h2>
+            <p class="i18n" data-i18n="about.p1">Aditegen 是一家专注于学术服务的专业机构，我们的团队由来自世界顶尖大学的博士和教授组成，拥有丰富的教学和研究经验。我们致力于为学生和研究人员提供高质量的学术支持服务，帮助他们在学术道路上取得成功。</p>
+            <p class="i18n" data-i18n="about.p2">我们的使命是通过专业的指导和个性化的服务，提升客户的学术能力和研究水平，助力他们在竞争激烈的学术环境中脱颖而出。</p>
         </section>
 
         <section id="contact">
-            <h2>联系我们</h2>
+            <h2 class="i18n" data-i18n="contact.title">联系我们</h2>
             <div class="contact-info">
-                <p><strong>邮箱：</strong> usaditegen@gmail.com</p>
-                <p><strong>电话：</strong> +1 (713) 550-2333</p>
-                
+                <p><strong class="i18n" data-i18n="contact.email">邮箱：</strong> usaditegen@gmail.com</p>
+                <p><strong class="i18n" data-i18n="contact.phone">电话：</strong> +1 (713) 550-2333</p>
+                <!-- <p><strong class="i18n" data-i18n="contact.address">地址：</strong> 123 Academic Street, Education City, CA 90210, USA</p> -->
             </div>
         </section>
     </div>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Aditegen Academic Services. All rights reserved.</p>
+            <p class="i18n" data-i18n="footer">&copy; 2023 Aditegen Academic Services. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // 翻译数据
+        const translations = {
+            zh: {
+                "title": "专业学术服务",
+                "subtitle": "助力您的学术成功",
+                "nav.home": "首页",
+                "nav.sci": "SCI发表",
+                "nav.training": "学术培训",
+                "nav.math": "数学辅导",
+                "nav.contact": "联系我们",
+                "home.title": "欢迎来到 Aditegen 学术服务",
+                "home.p1": "Aditegen 是一家专注于高端学术服务的专业机构，我们的团队由来自世界顶尖大学的博士和教授组成，致力于为学生和研究人员提供最专业的学术支持。",
+                "home.p2": "无论您是需要SCI论文发表指导，还是寻求学术培训或数学辅导，我们的专家团队都能为您提供个性化的解决方案。",
+                "sci.title": "SCI发表服务",
+                "sci.service1.title": "SCI论文全程辅导",
+                "sci.service1.desc": "我们的SCI论文辅导服务由经验丰富的学术专家提供，涵盖从选题、实验设计到论文撰写、修改和投稿的全过程。我们专注于帮助研究人员在高影响力期刊上发表论文。",
+                "sci.service1.item1": "研究课题设计与优化",
+                "sci.service1.item2": "论文结构与写作指导",
+                "sci.service1.item3": "数据分析和结果呈现",
+                "sci.service1.item4": "期刊选择与投稿策略",
+                "sci.service1.item5": "审稿意见回复指导",
+                "sci.service2.title": "硕博毕业论文辅导",
+                "sci.service2.desc": "为硕士和博士研究生提供全方位的毕业论文指导服务，从开题报告到最终答辩准备，我们的专家团队将全程陪伴您的学术旅程。",
+                "sci.service2.item1": "研究方案设计与优化",
+                "sci.service2.item2": "文献综述指导",
+                "sci.service2.item3": "研究方法咨询",
+                "sci.service2.item4": "论文结构与写作指导",
+                "sci.service2.item5": "答辩准备与模拟",
+                "training.title": "学术培训服务",
+                "training.service1.title": "学术写作培训",
+                "training.service1.desc": "针对学术论文写作的系统培训课程，帮助研究人员掌握国际学术写作规范。",
+                "training.service1.item1": "学术英语写作技巧",
+                "training.service1.item2": "文献综述写作方法",
+                "training.service1.item3": "研究论文各部分写作规范",
+                "training.service1.item4": "学术表达与论证技巧",
+                "training.service2.title": "研究方法培训",
+                "training.service2.desc": "系统讲解各类研究方法，提升研究设计能力。",
+                "training.service2.item1": "定量研究方法",
+                "training.service2.item2": "定性研究方法",
+                "training.service2.item3": "混合研究方法",
+                "training.service2.item4": "数据分析方法",
+                "math.title": "数学辅导服务",
+                "math.service1.title": "SAT数学培训",
+                "math.service1.desc": "我们的SAT数学培训课程针对中国学生特点设计，帮助学生快速掌握考试技巧，提高数学成绩。课程内容包括所有SAT数学考点和解题策略。",
+                "math.service1.item1": "全面覆盖SAT数学考试内容",
+                "math.service1.item2": "个性化学习计划",
+                "math.service1.item3": "真题模拟与解析",
+                "math.service1.item4": "考试技巧与时间管理",
+                "math.service1.item5": "定期进度评估",
+                "math.service2.title": "北美本科数学培训",
+                "math.service2.desc": "为在北美就读本科的学生提供专业数学课程辅导，包括微积分、线性代数、概率统计等核心课程。我们的导师均来自北美顶尖大学，熟悉北美教学体系。",
+                "math.service2.item1": "一对一课程辅导",
+                "math.service2.item2": "作业与考试准备",
+                "math.service2.item3": "概念理解与问题解决能力培养",
+                "math.service2.item4": "与教授沟通技巧指导",
+                "math.service2.item5": "学术写作辅导",
+                "about.title": "关于 Aditegen",
+                "about.p1": "Aditegen 是一家专注于学术服务的专业机构，我们的团队由来自世界顶尖大学的博士和教授组成，拥有丰富的教学和研究经验。我们致力于为学生和研究人员提供高质量的学术支持服务，帮助他们在学术道路上取得成功。",
+                "about.p2": "我们的使命是通过专业的指导和个性化的服务，提升客户的学术能力和研究水平，助力他们在竞争激烈的学术环境中脱颖而出。",
+                "contact.title": "联系我们",
+                "contact.email": "邮箱：",
+                "contact.phone": "电话：",
+                "contact.address": "地址：",
+                "footer": "&copy; 2023 Aditegen Academic Services. All rights reserved."
+            },
+            en: {
+                "title": "Professional Academic Services",
+                "subtitle": "Empowering Your Academic Success",
+                "nav.home": "Home",
+                "nav.sci": "SCI Publication",
+                "nav.training": "Academic Training",
+                "nav.math": "Math Tutoring",
+                "nav.contact": "Contact Us",
+                "home.title": "Welcome to Aditegen Academic Services",
+                "home.p1": "Aditegen is a professional organization specializing in high-end academic services. Our team consists of PhDs and professors from world-renowned universities, dedicated to providing the most professional academic support for students and researchers.",
+                "home.p2": "Whether you need guidance on SCI paper publication, academic training, or math tutoring, our expert team can provide personalized solutions for you.",
+                "sci.title": "SCI Publication Services",
+                "sci.service1.title": "Comprehensive SCI Paper Guidance",
+                "sci.service1.desc": "Our SCI paper guidance service is provided by experienced academic experts, covering the entire process from topic selection, experimental design to paper writing, revision and submission. We focus on helping researchers publish papers in high-impact journals.",
+                "sci.service1.item1": "Research topic design and optimization",
+                "sci.service1.item2": "Paper structure and writing guidance",
+                "sci.service1.item3": "Data analysis and results presentation",
+                "sci.service1.item4": "Journal selection and submission strategy",
+                "sci.service1.item5": "Guidance on responding to review comments",
+                "sci.service2.title": "Thesis Guidance for Master and PhD",
+                "sci.service2.desc": "Provide comprehensive thesis guidance services for master and doctoral students. From proposal to final defense preparation, our expert team will accompany you throughout your academic journey.",
+                "sci.service2.item1": "Research proposal design and optimization",
+                "sci.service2.item2": "Literature review guidance",
+                "sci.service2.item3": "Research methodology consultation",
+                "sci.service2.item4": "Thesis structure and writing guidance",
+                "sci.service2.item5": "Defense preparation and simulation",
+                "training.title": "Academic Training Services",
+                "training.service1.title": "Academic Writing Training",
+                "training.service1.desc": "Systematic training courses for academic paper writing to help researchers master international academic writing standards.",
+                "training.service1.item1": "Academic English writing skills",
+                "training.service1.item2": "Literature review writing methods",
+                "training.service1.item3": "Writing standards for various parts of research papers",
+                "training.service1.item4": "Academic expression and argumentation skills",
+                "training.service2.title": "Research Methods Training",
+                "training.service2.desc": "Systematically explain various research methods to improve research design capabilities.",
+                "training.service2.item1": "Quantitative research methods",
+                "training.service2.item2": "Qualitative research methods",
+                "training.service2.item3": "Mixed research methods",
+                "training.service2.item4": "Data analysis methods",
+                "math.title": "Mathematics Tutoring Services",
+                "math.service1.title": "SAT Math Training",
+                "math.service1.desc": "Our SAT math training course is designed for the characteristics of Chinese students, helping them quickly master test-taking skills and improve math scores. The course content covers all SAT math test points and problem-solving strategies.",
+                "math.service1.item1": "Comprehensive coverage of SAT math test content",
+                "math.service1.item2": "Personalized learning plan",
+                "math.service1.item3": "Real test simulation and analysis",
+                "math.service1.item4": "Test-taking skills and time management",
+                "math.service1.item5": "Regular progress assessment",
+                "math.service2.title": "North American Undergraduate Math Tutoring",
+                "math.service2.desc": "Provide professional math course tutoring for undergraduate students in North America, including core courses such as calculus, linear algebra, and probability statistics. Our tutors are all from top North American universities and are familiar with the North American teaching system.",
+                "math.service2.item1": "One-on-one course tutoring",
+                "math.service2.item2": "Homework and exam preparation",
+                "math.service2.item3": "Concept understanding and problem-solving skills development",
+                "math.service2.item4": "Guidance on communication with professors",
+                "math.service2.item5": "Academic writing tutoring",
+                "about.title": "About Aditegen",
+                "about.p1": "Aditegen is a professional organization focusing on academic services. Our team consists of PhDs and professors from world-renowned universities with extensive teaching and research experience. We are committed to providing high-quality academic support services to help students and researchers succeed in their academic pursuits.",
+                "about.p2": "Our mission is to enhance clients' academic capabilities and research levels through professional guidance and personalized services, helping them stand out in the highly competitive academic environment.",
+                "contact.title": "Contact Us",
+                "contact.email": "Email:",
+                "contact.phone": "Phone:",
+                "contact.address": "Address:",
+                "footer": "&copy; 2023 Aditegen Academic Services. All rights reserved."
+            }
+        };
+
+        // 当前语言
+        let currentLang = 'zh';
+
+        // 切换语言函数
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // 更新按钮状态
+            document.getElementById('zh-btn').classList.toggle('active', lang === 'zh');
+            document.getElementById('en-btn').classList.toggle('active', lang === 'en');
+            
+            // 更新所有需要翻译的元素
+            document.querySelectorAll('.i18n').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    if (element.tagName === 'INPUT') {
+                        element.value = translations[lang][key];
+                    } else {
+                        element.innerHTML = translations[lang][key];
+                    }
+                }
+            });
+        }
+
+        // 初始化语言切换按钮
+        document.getElementById('zh-btn').addEventListener('click', () => switchLanguage('zh'));
+        document.getElementById('en-btn').addEventListener('click', () => switchLanguage('en'));
+
+        // 默认显示中文
+        switchLanguage('zh');
+    </script>
 </body>
 </html>
